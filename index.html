@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./myVue.js"></script>
+  <script src="./dep.js"></script>
+  <script src="./watch.js"></script>
+</head>
+<body>
+  <div id='root'>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{a.b}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="a.b" value="" >
+    <button onclick="test()">获取输入框的值</button>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{a.b}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="a.b" value="" >
+    <button onclick="test()">获取输入框的值</button>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{a.b}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="c" value="" >
+    <button onclick="test()">获取输入框的值</button>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="a.b" value="" >
+    <button onclick="test()">获取输入框的值</button>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{a.b}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="o" value="" >
+    <button onclick="test()">获取输入框的值</button>
+    <div>
+        <div>这里的数据1======<span style="color: red;">{{o}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{c}}</span></div>
+        <div>这里是数据2======<span style="color: green;">{{o}}</span></div>
+    </div>
+    <input type="text" :model="c" value="" >
+    <button onclick="test()">获取输入框的值</button>
+  </div>
+</body>
+<script type="text/javascript">
+  let b = "22222222223333333333333333333";
+  let vm = new MyVue({
+    el: "#root",
+    data: { a: { b: b }, c: 12, o: 11111111111111 }
+  });
+  function test() {
+    console.log(vm.a.b,'-----------');
+  }
+</script>
+</html>
